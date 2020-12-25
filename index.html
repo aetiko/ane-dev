@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>ANE DEV</title>
 </head>
+
 <body>
     <!-- mobile navigation -->
     <div id="slideout-menu">
@@ -33,10 +34,10 @@
             </li>
             <li>
                 <input type="text" placeholder="Broaden your knowledge">
-                <br>
+                <!-- <br>
                 <a href="#">
                     <i class="fa fa-search"></i>
-                </a>
+                </a> -->
             </li>
         </ul>
     </div>
@@ -52,22 +53,22 @@
         </div>
         <ul>
             <li>
-                <a class="active" href="#">MAIN</a>
+                <a class="active" href="index.html">MAIN</a>
             </li>
             <li>
-                <a href="#">UNDERGRAD</a>
+                <a href="undergrad.html">UNDERGRAD</a>
             </li>
             <li>
-                <a href="#">PORTFOLIO</a>
+                <a href="portfolio.html">PORTFOLIO</a>
             </li>
             <li>
-                <a href="#">SERVICES</a>
+                <a href="services.html">SERVICES</a>
             </li>
             <!-- <li>
                 <a href="#">STACK ANE</a>
             </li> -->
             <li>
-                <a href="#">ANE DEV</a>
+                <a href="about.html">ANE DEV</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -77,18 +78,22 @@
             </li>
         </ul>
     </nav>
-    
+
+    <div id="searchbox">
+        <input type="text" placeholder="Broaden your knowledge">
+    </div>
+
     <!-- banner for frontpage -->
     <div id="banner">
         <h1>ANE DEV &#169;</h1>
-        
+
         <h3>Embracing the world of both <br> Back-end and Front-end Development</h3>
     </div>
-    
+
 
     <!-- main section of website -->
     <main>
-        <a href="#">
+        <a href="undergrad.html">
             <h2 class="section-heading">COURSES TAKEN AT UNB</h2>
         </a>
         <!-- Courses taken at UNB -->
@@ -96,66 +101,64 @@
             <!-- Java 1 -->
             <div class="card">
                 <div class="card-image">
-                    <a href="#">
+                    <a href="undergradpost.html">
                         <img src="IMAGES/java.jpg" alt="Introduction to Java">
                     </a>
                 </div>
                 <div class="card-description">
-                    <a href="#">
+                    <a href="undergradpost.html">
                         <h3>Introduction to Computer Programming 1 (in Java)</h3>
                     </a>
                     <p>
-                        Covers fundamental concepts such as decisions, loops, arrays, classes, methods and inheritance; focusing on problem
-                        analysis, algorithm design, program structure and readability. Introduction to the Java API libraries.
+                        Covers fundamental concepts such as decisions, loops, arrays, classes, methods and inheritance; focusing on problem analysis, algorithm design, program structure and readability. Introduction to the Java API libraries.
                     </p>
-                    <a href="#" class="btn-readmore">Read more</a>
+                    <a href="undergradpost.html" class="btn-readmore">Read more</a>
                 </div>
             </div>
             <!-- Java 2 -->
             <div class="card">
                 <div class="card-image">
-                    <a href="#">
+                    <a href="undergradpost.html">
                         <img src="IMAGES/java2.jpg" alt="Introduction to Java 2">
                     </a>
                 </div>
                 <div class="card-description">
-                    <a href="#">
+                    <a href="undergradpost.html">
                         <h3>Introduction to Computer Programming 2 (in Java)</h3>
                     </a>
                     <p>
-                        Focusing on problem analysis, algorithm design program structure and readability. Covers recursion, sorting and
-                        searching, data abstraction, encapsulation, inheritance, polymorphism, simple data structures and files, testing and
-                        debugging.
+                        Focusing on problem analysis, algorithm design program structure and readability. Covers recursion, sorting and searching, data abstraction, encapsulation, inheritance, polymorphism, simple data structures and files, testing and debugging.
                     </p>
-                    <a href="#" class="btn-readmore">Read more</a>
+                    <a href="undergradpost.html" class="btn-readmore">Read more</a>
                 </div>
             </div>
         </section>
 
         <!-- All projects worked on -->
-        <h2 class="section-heading">PORTFOLIO</h2>
-        <section>
-            <!-- Bonds Web Development -->
-            <div class="card">
-                <div class="card-image">
-                    <a href="#">
-                        <img src="IMAGES/Bonds.png" alt="Bonds Web dev">
-                    </a>
+        <a href="portfolio.html">
+            <h2 class="section-heading">PORTFOLIO</h2>
+            <section>
+                <!-- Bonds Web Development -->
+                <div class="card">
+                    <div class="card-image">
+                        <a href="portfoliopost.html">
+                            <img src="IMAGES/Bonds.png" alt="Bonds Web dev">
+                        </a>
+                    </div>
+                    <div class="card-description">
+                        <a href="portfoliopost.html">
+                            <h3>BONDS WEB DEV</h3>
+                        </a>
+                        <p>
+                            Self owned (by Iletutu Awosika) atelier aimed at displaying and providing diverse designs and products. Currently producing Jewellery, Apparel, and Visual Art. ANE DEV help put Bonds vision out to the world, builing an E-commerece platfrom to distribute
+                            the products.
+                        </p>
+                        <a href="portfoliopost.html" class="btn-readmore">Read more</a>
+                    </div>
                 </div>
-                <div class="card-description">
-                    <a href="#">
-                        <h3>BONDS WEB DEV</h3>
-                    </a>
-                    <p>
-                        Self owned (by Iletutu Awosika) atelier aimed at displaying and providing diverse designs and products. Currently producing Jewellery, Apparel, and Visual Art.
-                        ANE DEV help put Bonds vision out to the world, builing an E-commerece platfrom to distribute the products.
-                    </p>
-                    <a href="#" class="btn-readmore">Read more</a>
-                </div>
-            </div>
-            <!-- cakes by bims, mikes website , development on the side from udemy copy the section above and add fillers-->
-        </section>
-        <!-- Link to my sourceCode
+                <!-- cakes by bims, mikes website , development on the side from udemy copy the section above and add fillers-->
+            </section>
+            <!-- Link to my sourceCode
         <h class="section-heading">Source Code</h>
         <section id="section-source">
             <p>
@@ -163,11 +166,13 @@
             </p>
             <a href="#">GitHub</a>
         </section> -->
-        <!-- Making my footer really simple -->
-        <footer>
-            <div id="footer">&#169; Ayoola Nurudeen Etiko. All Rigths Reserved. </div>
-                
-        </footer>
+            <!-- Making my footer really simple -->
+            <footer>
+                <div id="footer">&#169; Ayoola Nurudeen Etiko. All Rigths Reserved. </div>
+
+            </footer>
     </main>
+    <script src="main.js"></script>
 </body>
+
 </html>
