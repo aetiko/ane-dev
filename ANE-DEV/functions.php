@@ -72,3 +72,30 @@ function ane_dev_custom_portfolio_post_type(){
 }
 
 add_action('init', 'ane_dev_custom_portfolio_post_type');
+
+
+// portfolio post type
+
+// function ane_dev_custom_service_post_type()
+// {
+//     register_post_type('SERVICE',
+//         array(
+//             'rewrite' => array('slug' => 'SERVICE'),
+//             'labels' => array(
+//                 'name' => 'SERVICE',
+//                 'singular_name' => 'SERVICE',
+//                 'add_new_item' => 'ADD NEW SERVICE',
+//                 'edit_item' => 'EDIT SERVICE'
+//             ),
+//             'menu-icon' => 'dashicons-clipboard',
+//             'public' => true,
+//             'has_archive' => true,
+//             'supports' => array(
+//                 'title', 'thumbnail', 'editor', 'excerpt', 'comments'
+//             )
+//         )
+//     );
+// }
+
+// add_action('init', 'ane_dev_custom_service_post_type');
+

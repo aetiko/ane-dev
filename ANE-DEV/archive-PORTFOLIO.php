@@ -2,7 +2,7 @@
 <!-- main section of website -->
 <main>
     <a href="<?php echo site_url('/blog'); ?>">
-        <h2 class="page-heading">BLOG</h2>
+        <h2 class="page-heading">PORTFOLIO</h2>
     </a>
     <section>
         <?php
@@ -21,7 +21,7 @@
                     </a>
                     <div class="card-meta">
                         Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?>
-                        in <a href="#"><?php echo get_the_category_list(',') ?></a>
+                        </a>
                     </div>
                     <p>
                         <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
