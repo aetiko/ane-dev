@@ -5,8 +5,10 @@
 function ane_setup(){
     wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
     wp_enqueue_style('fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-    wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime(), all);
-    wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, microtime(), true);
+    // wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime(), all);
+    // wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, microtime(), true);
+    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'ane_setup');
@@ -73,7 +75,28 @@ function ane_dev_custom_portfolio_post_type(){
 
 add_action('init', 'ane_dev_custom_portfolio_post_type');
 
+// sidebar
 
+function ane_widgets(){
+    register_sidebar(
+        array(
+            'name' => 'Main Sidebar',
+            'id' => 'main_sidebar',
+            'before_tittle' => '<h3>',
+            'after_title' => '</h3>'
+        )
+        );
+}
+
+add_action('widgets_init', ane_widgets());
+
+function search_filter($query){
+    if($query->is_search()){
+        $query->set('post_type', array('post', 'PORTFOLIO', 'UNDERGRAD'));
+    }
+}
+
+add_filter( 'pre_get_posts', 'search_filter' );
 // portfolio post type
 
 // function ane_dev_custom_service_post_type()

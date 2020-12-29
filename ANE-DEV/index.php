@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <!-- main section of website -->
-<main>
     <a href="<?php echo site_url('/blog'); ?>">
         <h2 class="page-heading">BLOG</h2>
     </a>

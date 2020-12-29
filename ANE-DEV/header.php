@@ -33,18 +33,14 @@
             <li>
                 <a href="<?php echo site_url('/about'); ?>">ANE DEV</a>
             </li>
-            <li>
-                <input type="text" placeholder="Broaden your knowledge">
-                <!-- <br>
-                <a href="#">
-                    <i class="fa fa-search"></i>
-                </a> -->
-            </li>
+            <div class="searchbox-slide-menu">
+                <?php get_search_form(); ?>
+            </div>
         </ul>
     </div>
     <nav>
         <div id="logo-img">
-            <a href="#">
+            <a href="<?php echo site_url(''); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/ANELOGO3.png" alt="ANEDEV LOGO">
             </a>
         </div>
@@ -54,16 +50,16 @@
         </div>
         <ul>
             <li>
-                <a href="<?php echo site_url(''); ?>">MAIN</a>
+                <a href="<?php echo site_url(''); ?>" <?php if (is_front_page()) echo 'class= "active"' ?>>MAIN</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/blog'); ?>">BLOG</a>
+                <a href="<?php echo site_url('/blog'); ?>" <?php if (get_post_type() == 'post') echo 'class= "active"' ?>>BLOG</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/UNDERGRAD'); ?>">UNDERGRAD</a>
+                <a href="<?php echo site_url('/UNDERGRAD'); ?>" <?php if (get_post_type() == 'UNDERGRAD') echo 'class= "active"' ?>>UNDERGRAD</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/PORTFOLIO'); ?>">PORTFOLIO</a>
+                <a href="<?php echo site_url('/PORTFOLIO'); ?>" <?php if (get_post_type() == 'PORTFOLIO') echo 'class= "active"' ?>>PORTFOLIO</a>
             </li>
             <!-- <li>
                 <a href="<?php echo site_url('/SERVICE'); ?>">SERVICES</a>
@@ -72,7 +68,7 @@
                 <a href="#">STACK ANE</a>
             </li> -->
             <li>
-                <a href="<?php echo site_url('/about'); ?>">ANE DEV</a>
+                <a href="<?php echo site_url('/about'); ?>" <?php if (is_page('about')) echo 'class= "active"' ?>>ANE DEV</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -84,5 +80,9 @@
     </nav>
 
     <div id="searchbox">
-        <input type="text" placeholder="Broaden your knowledge">
+        <?php get_search_form(); ?>
     </div>
+
+    <?php if (!is_front_page()) { ?>
+        <main>
+        <?php } ?>

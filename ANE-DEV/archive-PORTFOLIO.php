@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <!-- main section of website -->
-<main>
-    <a href="<?php echo site_url('/blog'); ?>">
+    <a href="<?php echo site_url('/PORTFOLIO'); ?>">
         <h2 class="page-heading">PORTFOLIO</h2>
     </a>
     <section>
