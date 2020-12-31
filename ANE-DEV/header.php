@@ -56,10 +56,11 @@
                 <a href="<?php echo site_url('/blog'); ?>" <?php if (get_post_type() == 'post') echo 'class= "active"' ?>>BLOG</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/UNDERGRAD'); ?>" <?php if (get_post_type() == 'UNDERGRAD') echo 'class= "active"' ?>>UNDERGRAD</a>
+                <a href="<?php echo site_url('/UNDERGRAD'); ?>" <?php if (get_post_type() === 'undergrad') echo 'class= "active"' ?>>UNDERGRAD</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/PORTFOLIO'); ?>" <?php if (get_post_type() == 'PORTFOLIO') echo 'class= "active"' ?>>PORTFOLIO</a>
+                <?php //print_r(get_post_type()); ?> 
+                <a href="<?php echo site_url('/PORTFOLIO'); ?>" <?php if (get_post_type() === 'portfolio') echo 'class= "active"' ?>>PORTFOLIO</a>
             </li>
             <!-- <li>
                 <a href="<?php echo site_url('/SERVICE'); ?>">SERVICES</a>

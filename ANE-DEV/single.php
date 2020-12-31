@@ -9,15 +9,15 @@ while (have_posts()) {
         <div id="post-container">
             <section id="blogpost">
                 <div class="card">
-                    <div class="card-meta-blogpost">
-                        Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?>
-                        <?php if(get_post_type()== 'post'){ ?>
-                                in <a href="#"><?php echo get_the_category_list(',') ?>
-                        </a>
-                        <?php } ?>
-                    </div>
                     <div class="card-image">
                         <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Posts">
+                    </div>
+                    <div class="card-meta-blogpost">
+                        Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?>
+                        <?php if (get_post_type() == 'post') { ?>
+                            in <a href="#"><?php echo get_the_category_list(',') ?>
+                            </a>
+                        <?php } ?>
                     </div>
                     <div class="card-description">
                         <?php the_content(); ?>
@@ -65,7 +65,7 @@ while (have_posts()) {
             </section>
         <?php } ?>
         <aside id="sidebar">
-            <?php dynamic_sidebar('main_sidebar');?>
+            <?php dynamic_sidebar('main_sidebar'); ?>
         </aside>
         </div>
         <!-- All projects worked on -->

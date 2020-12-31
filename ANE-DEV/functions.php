@@ -29,24 +29,46 @@ add_action('after_setup_theme', 'ane_dev_init');
 
 // undergrad post type
 
-function ane_dev_custom_undergrad_post_type(){
-    register_post_type('UNDERGRAD',
-    array(
-        'rewrite' => array('slug' => 'UNDERGRAD'),
-        'labels' => array(
-            'name' => 'UNDERGRAD',
-            'singular_name' => 'UNDERGRAD',
-            'add_new_item' => 'ADD NEW UNDERGRAD',
-            'edit_item' => 'EDIT UNDERGRAD'
-        ),
-        'menu-icon' => 'dashicons-clipboard',
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array(
-            'title', 'thumbnail', 'editor', 'excerpt', 'comments'
+// function ane_dev_custom_undergrad_post_type(){
+//     register_post_type('UNDERGRAD',
+//     array(
+//         'rewrite' => array('slug' => 'UNDERGRAD'),
+//         'labels' => array(
+//             'name' => 'UNDERGRAD',
+//             'singular_name' => 'UNDERGRAD',
+//             'add_new_item' => 'ADD NEW UNDERGRAD',
+//             'edit_item' => 'EDIT UNDERGRAD'
+//         ),
+//         'menu-icon' => 'dashicons-clipboard',
+//         'public' => true,
+//         'has_archive' => true,
+//         'supports' => array(
+//             'title', 'thumbnail', 'editor', 'excerpt', 'comments'
+//             )
+//         )
+//         );
+// }
+// 
+function ane_dev_custom_undergrad_post_type()
+{
+    register_post_type(
+        'UNDERGRAD',
+        array(
+            'rewrite' => array('slug' => 'UNDERGRAD'),
+            'labels' => array(
+                'name' => 'UNDERGRAD',
+                'singular_name' => 'UNDERGRAD',
+                'add_new_item' => 'ADD NEW UNDERGRAD',
+                'edit_item' => 'EDIT UNDERGRAD'
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments'
             )
         )
-        );
+    );
 }
 
 add_action('init', 'ane_dev_custom_undergrad_post_type');
