@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    <!-- <link rel="stylesheet" type="text/css" href="<?php //echo get_stylesheet_directory_uri(); ?>/style.css"> -->
     <title>ANE DEV</title>
 </head>
 
@@ -63,7 +64,7 @@
                 <a href="<?php echo site_url('/PORTFOLIO'); ?>" <?php if (get_post_type() === 'portfolio') echo 'class= "active"' ?>>PORTFOLIO</a>
             </li>
             <!-- <li>
-                <a href="<?php echo site_url('/SERVICE'); ?>">SERVICES</a>
+                <a href="<?php //echo site_url('/SERVICE'); ?>">SERVICES</a>
             </li> -->
             <!-- <li>
                 <a href="#">STACK ANE</a>

@@ -7,11 +7,11 @@ function ane_setup(){
     wp_enqueue_style('fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
     // wp_enqueue_style('style', get_stylesheet_uri(), NULL, microtime(), all);
     // wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, microtime(), true);
-    wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, '1.0.0', true);
+    wp_enqueue_style( 'style' , get_stylesheet_uri() );
+    wp_enqueue_script( 'main' , get_stylesheet_directory_uri().'/js/main.js' , NULL , '1.0.0' , true);
 }
 
-add_action('wp_enqueue_scripts', 'ane_setup');
+add_action( 'wp_enqueue_scripts', 'ane_setup' );
 
 // adding theme support for featured image
 // adding the theme support for the title tag to make it dynamic

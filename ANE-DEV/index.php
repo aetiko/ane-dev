@@ -23,7 +23,7 @@
                         in <a href="#"><?php echo get_the_category_list(',') ?></a>
                     </div>
                     <p>
-                        <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                        <?php echo wp_trim_words(get_the_excerpt(), 100); ?>
                     </p>
                     <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
                 </div>

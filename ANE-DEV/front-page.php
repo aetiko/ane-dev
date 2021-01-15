@@ -2,8 +2,6 @@
 <!-- banner for frontpage -->
 <div id="banner">
     <h1>ANE DEV &#169;</h1>
-
-    <h3>Embracing the world of both <br> Back-end and Front-end Development</h3>
 </div>
 
 
@@ -33,7 +31,7 @@
                         <h3><?php the_title(); ?></h3>
                     </a>
                     <p>
-                        <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                        <?php echo wp_trim_words(get_the_excerpt(), 100); ?>
                     </p>
                     <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
                 </div>
@@ -69,7 +67,7 @@
                         <h3><?php the_title(); ?></h3>
                     </a>
                     <p>
-                        <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                        <?php echo wp_trim_words(get_the_excerpt(), 100); ?>
                     </p>
                     <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
                 </div>
@@ -105,7 +103,7 @@
                             <h3><?php the_title(); ?></h3>
                         </a>
                         <p>
-                            <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                            <?php echo wp_trim_words(get_the_excerpt(), 100); ?>
                         </p>
                         <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
                     </div>
